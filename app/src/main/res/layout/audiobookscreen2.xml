@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/content_bg_full"
+    android:orientation="vertical"
+    tools:ignore="HardcodedText">
+
+
+    <com.gayatri.testapp.Utils.SlideHolder
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal">
+
+            <view
+                android:id="@+id/headerlinearLayout"
+                class="com.gayatri.testapp.Utils.DrawerMenu"
+                android:layout_width="230dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="top"
+                android:gravity="center_horizontal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/more_header_ll"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <include
+                    android:id="@+id/moreview_header_ll"
+                    layout="@layout/header"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="top"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            <ScrollView
+
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="95">
+
+                <LinearLayout
+                    android:id="@+id/eventsearch_main_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+
+                        android:id="@+id/main_ll"
+                        android:layout_width="match_parent"
+
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:id="@+id/tv_eventstitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:padding="5dp"
+                            android:text="Create Book -Audio"
+                            android:textColor="@color/black"
+                            android:textSize="17sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Playing Audio....."
+                            android:textColor="@color/black"
+                            android:textSize="15sp" />
+                        <!--<readmojoo.Utils.MyEditText
+
+                            android:id="@+id/audio_data"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginTop="10dp"
+                            android:paddingTop="10dp"
+                            android:background="@drawable/ed_bg"
+                            android:gravity="top"
+                            android:hint="Word1 Word2 Word3 Word4 Word5..."
+                            android:lines="4"
+                            android:maxLines="10"
+                            android:minLines="4"
+                            android:scrollbars="vertical"
+                            android:textColor="@color/black"
+                            android:textSize="15sp" />
+            -->
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:layout_margin="20dp"
+                            android:background="@drawable/ed_bg">
+
+                            <android.support.v4.widget.NestedScrollView
+                                android:id="@+id/rec_scroll"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <android.support.v7.widget.RecyclerView
+                                    android:id="@+id/rc_sentence"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" />
+
+
+                            </android.support.v4.widget.NestedScrollView>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/next_main_rl"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone">
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:id="@+id/next_btn"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/next" />
+
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:layout_centerInParent="true"
+                                android:layout_marginBottom="10dp"
+                                android:textColor="@color/white"
+                                android:textSize="15sp" />
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="20dp">
+
+                            <TextView
+                                android:id="@+id/taptoreadnext"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/done_icon"
+                                android:gravity="center"
+                                android:onClick="speakout"
+                                android:text="Tap here to move to next word"
+                                android:textColor="@color/white" />
+                        </RelativeLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+
+
+            <LinearLayout
+                android:id="@+id/more_footer_ll"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="10">
+
+                <view
+                    android:id="@+id/footerlinearLayout"
+                    class="com.gayatri.testapp.Utils.Footer"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="bottom"
+                    android:gravity="center" />
+                <!--
+                  <include
+                      android:id="@+id/app_footer"
+                      android:layout_width="fill_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_gravity="bottom"
+                      layout="@layout/footer" />
+           -->
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </com.gayatri.testapp.Utils.SlideHolder>
+</LinearLayout>

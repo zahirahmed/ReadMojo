@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg1">
+
+
+    <com.gayatri.testapp.Utils.SlideHolder
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            >
+
+            <view
+                android:id="@+id/headerlinearLayout"
+                android:layout_width="230dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="top"
+                class="com.gayatri.testapp.Utils.DrawerMenu"
+                android:gravity="center_horizontal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <ScrollView
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                >
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:background="@color/blueshade"
+                        android:id="@+id/header_ll"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp" >
+
+                        <include
+                            android:id="@+id/cb_header_ll"
+                            android:layout_height="50dp"
+                            android:layout_width="match_parent"
+                            android:gravity="center"
+                            android:layout_gravity="top"
+                            layout="@layout/header" />
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:id="@+id/main_ll"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+
+
+                        <TextView
+                            android:id="@+id/tv_eventstitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:text="Create Book -Image"
+                            android:textColor="@color/black"
+                            android:textSize="17sp"
+                            android:padding="5dp"
+                            android:textStyle="normal" />
+                        <TextView
+                            android:id="@+id/tv_attach_image"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Attaching Image....."
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content">
+                                <android.support.design.widget.TextInputLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    app:hintTextAppearance="@android:style/TextAppearance.Small">
+
+                                    <AutoCompleteTextView
+                                        android:id="@+id/book_data"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="20dp"
+                                        android:layout_marginRight="20dp"
+                                        android:layout_marginTop="10dp"
+                                        android:inputType="textMultiLine"
+                                        android:editable="true"
+                                        android:enabled="true"
+                                        android:isScrollContainer="true"
+                                        android:focusable="true"
+                                        android:gravity="top|left"
+                                        android:hint="Book content"
+                                        android:lines="6"
+                                        android:maxLines="8"
+                                        android:minLines="6"
+                                        android:scrollbars="vertical"
+                                        android:textColor="@color/black"
+                                        android:textColorHint="@color/black"
+                                        android:textSize="12sp"  />
+                                </android.support.design.widget.TextInputLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <android.support.v7.widget.RecyclerView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:numColumns="2"
+                                        android:id="@+id/iv_grid"
+                                        android:gravity="center"
+                                        />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:id="@+id/takePicture_ll"
+                                    android:gravity="center"
+                                    android:layout_margin="5dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+
+                                    <ImageView
+                                        android:id="@+id/iv_capture"
+                                        android:src="@drawable/cameramain"
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp" />
+
+                                </LinearLayout>
+
+
+
+
+                                <Button
+                                    android:layout_margin="15dp"
+                                    android:id="@+id/bt_create_image_book"
+                                    style="?android:textAppearanceSmall"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/grey_0"
+                                    android:layout_marginTop="2dp"
+                                    android:background="@drawable/login_btn"
+                                    android:text="Create Image Book" />
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:visibility="gone"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            >
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/signin_btn"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="Tap here move to next word"/>
+                        </RelativeLayout>
+
+
+
+                        <View
+                            android:visibility="gone"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/white"></View>
+
+                        <RelativeLayout
+                            android:visibility="gone"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/next_main_rl">
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <ImageView
+                                    android:id="@+id/next_btn"
+                                    android:src="@drawable/next"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="60dp"
+                                    />
+
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:layout_centerInParent="true"
+                                android:textSize="15sp"
+                                android:layout_marginBottom="10dp"
+                                android:textColor="@color/white"/>
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </ScrollView>
+
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/more_footer_ll"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="10"
+                >
+
+                <view
+                    android:id="@+id/footerlinearLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="bottom"
+                    class="com.gayatri.testapp.Utils.Footer"
+                    android:gravity="center" />
+                <!--
+                  <include
+                      android:id="@+id/app_footer"
+                      android:layout_width="fill_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_gravity="bottom"
+                      layout="@layout/footer" />
+           -->
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </com.gayatri.testapp.Utils.SlideHolder>
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/snackbarImageBook"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:padding="5dp"
+        app:statusBarBackground="@color/sticky_item"></android.support.design.widget.CoordinatorLayout>
+</RelativeLayout>

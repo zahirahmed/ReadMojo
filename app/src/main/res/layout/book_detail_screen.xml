@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_below="@+id/header_detail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+  <!--  <com.rey.material.widget.SnackBar
+        android:id="@+id/snack_bookdeatil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:layout_alignParentBottom="true"/>-->
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/snackbarbookdetail"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:padding="5dp"
+        app:statusBarBackground="@color/sticky_item"></android.support.design.widget.CoordinatorLayout>
+
+
+</LinearLayout>

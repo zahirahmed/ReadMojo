@@ -1,0 +1,117 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+
+    tools:context=".LoginActivity">
+    <LinearLayout
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Login progress -->
+        <ProgressBar android:id="@+id/login_progress" style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp" android:visibility="gone" />
+
+        <ScrollView android:id="@+id/login_form" android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/ll_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:orientation="vertical">
+
+
+
+                <LinearLayout
+                    android:id="@+id/email_login_form"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/loginactivity_logo_from_login"
+                    android:weightSum="1">
+
+
+
+
+                    <Button
+                        android:id="@+id/textbook_ll"
+                        style="?android:textAppearanceSmall"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/grey_0"
+                        android:layout_marginTop="2dp"
+                        android:background="@drawable/login_btn"
+                        android:text="Text Book" />
+
+
+                    <Button
+                        android:id="@+id/audiobook_ll"
+                        style="?android:textAppearanceSmall"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/grey_0"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/login_btn"
+                        android:text="Audio Book" />
+
+
+
+                    <Button
+                        android:id="@+id/testbook_ll"
+                        style="?android:textAppearanceSmall"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/grey_0"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/login_btn"
+                        android:text="Test Book" />
+
+
+                    <Button
+                        android:id="@+id/imagebook_ll"
+                        style="?android:textAppearanceSmall"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/grey_0"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/login_btn"
+                        android:text="Image Book" />
+
+
+                    <Button
+                        android:id="@+id/allbook_ll"
+                        style="?android:textAppearanceSmall"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/grey_0"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/login_btn"
+                        android:text="All Book" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        app:statusBarBackground="@color/sticky_item"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/snackbarlocation">
+    </android.support.design.widget.CoordinatorLayout>
+
+</RelativeLayout>

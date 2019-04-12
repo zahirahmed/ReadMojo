@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue"
+    >
+
+
+    <LinearLayout
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_margin="15dp"
+        android:orientation="vertical"
+        android:paddingBottom="20dp">
+       <LinearLayout
+           android:id="@+id/login_ll"
+           android:padding="2dp"
+           android:background="@color/pink"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+           <ImageView
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_weight="15"
+               android:src="@drawable/profile"
+               android:background="@color/pinkshade"
+               />
+           <TextView
+               android:layout_width="0dp"
+               android:layout_weight="80"
+               android:layout_height="match_parent"
+               android:text="Login"
+               android:gravity="center"
+               android:textColor="@color/white"
+               android:textSize="12sp"
+              />
+       </LinearLayout>
+        <LinearLayout
+            android:id="@+id/fblogin_ll"
+            android:padding="2dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/pink"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_weight="15"
+                android:src="@drawable/fb"
+                android:background="@color/pinkshade"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="80"
+                android:layout_height="match_parent"
+                android:text="Facebook Login"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="12sp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/signup_ll"
+        android:layout_margin="15dp"
+       android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/pink"
+            android:gravity="center"
+            android:text="Are you new user? Sign up here"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/content_bg_full">
+    <com.gayatri.testapp.Utils.SlideHolder
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            >
+
+            <view
+                android:id="@+id/headerlinearLayout"
+                android:layout_width="230dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="top"
+                class="com.gayatri.testapp.Utils.DrawerMenu"
+                android:gravity="center_horizontal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:background="@color/blueshade"
+                android:id="@+id/header_ll"
+                android:layout_width="match_parent"
+                android:layout_height="50dp" >
+
+                <include
+                    android:id="@+id/cb_header_ll"
+                    android:layout_height="50dp"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:layout_gravity="top"
+                    layout="@layout/header" />
+            </LinearLayout>
+                          <ScrollView
+
+                    android:layout_width="match_parent"
+                              android:layout_weight="80"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/eventsearch_main_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/main_ll"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_bookofauthor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:text="Reading Mode - "
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:padding="5dp"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/tv_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:text="William"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:padding="5dp"
+        android:textStyle="normal" />
+
+
+</LinearLayout>
+
+<LinearLayout
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+          <TextView
+              android:id="@+id/readexternal"
+              android:layout_marginLeft="10dp"
+              android:gravity="center"
+              android:textColor="@color/white"
+              android:background="@drawable/signin_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+              android:layout_marginRight="10dp"
+            android:text="Read to me"/>
+
+
+            <TextView
+                android:id="@+id/readbyself"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/signin_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="I will read"/>
+
+</LinearLayout>
+            <LinearLayout
+                android:layout_marginLeft="10dp"
+                android:id="@+id/readdatamain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <TextView
+                android:textSize="15dp"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bed time story !!!!"/>
+
+        </LinearLayout>
+
+
+        <com.gayatri.testapp.Utils.MyEditText
+            android:id="@+id/book_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/txtbox_big"
+            android:gravity="top|left"
+            android:hint="Once upon a time,there were a fox and a horse living in a forest.They have been friends for long time."
+            android:lines="8"
+            android:maxLines="10"
+            android:minLines="6"
+            android:scrollbars="vertical"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="12sp" />
+        <LinearLayout
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:background="@drawable/previous_icon1"></TextView>
+
+                <TextView
+                    android:gravity="center"
+                    android:textSize="20dp"
+                    android:textColor="@color/black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Previous"/>
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:layout_marginLeft="8dp"
+                android:text="02/25"
+                android:gravity="center"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:background="@drawable/datafill"/>
+            <LinearLayout
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/next"></TextView>
+
+                <TextView
+                    android:gravity="center"
+                    android:textSize="20dp"
+android:textColor="@color/black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Next"/>
+                </LinearLayout>
+
+        </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/endbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="End"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:background="@drawable/active_select"/>
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>
+
+</ScrollView>
+
+
+
+    <LinearLayout
+        android:id="@+id/eventsearch_footer_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:background="@android:color/white" >
+
+        <view
+            android:id="@+id/footerlinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            class="com.gayatri.testapp.Utils.Footer"
+            android:gravity="center" />
+
+        <!--  <include
+        android:id="@+id/app_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/footer"
+        android:gravity="center" /> -->
+
+    </LinearLayout>
+</LinearLayout>
+    </com.gayatri.testapp.Utils.SlideHolder>
+   </LinearLayout>

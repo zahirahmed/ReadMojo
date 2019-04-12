@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+
+    tools:context=".TestActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+
+        <LinearLayout
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            >
+
+            <view
+                android:id="@+id/headerlinearLayout"
+                android:layout_width="230dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="top"
+                class="com.gayatri.testapp.Utils.DrawerMenu"
+                android:gravity="center_horizontal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+            <LinearLayout
+                android:background="@color/blueshade"
+                android:id="@+id/header_ll"
+                android:layout_width="match_parent"
+                android:layout_height="50dp" >
+
+                <include
+                    android:id="@+id/cb_header_ll"
+                    android:layout_height="50dp"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:layout_gravity="top"
+                    layout="@layout/header" />
+            </LinearLayout>
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/more_header_ll"
+                android:layout_width="match_parent"
+                android:layout_height="50dp" >
+
+                <include
+
+                    android:id="@+id/moreview_header_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="top"
+                    layout="@layout/header"
+                    android:gravity="center" />
+            </LinearLayout>
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+                <LinearLayout
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:id="@+id/more_main_ll"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+
+                        android:id="@+id/main_ll"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:id="@+id/tv_eventstitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:padding="5dp"
+                            android:text="Create Book - Test"
+                            android:textColor="@color/black"
+                            android:textSize="17sp"
+                            android:textStyle="normal" />
+
+
+                        <LinearLayout
+                            android:id="@+id/email_login_form"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginTop="@dimen/loginactivity_logo_from_login"
+                            android:weightSum="1">
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:hintTextAppearance="@android:style/TextAppearance.Small">
+
+                                <AutoCompleteTextView
+                                    android:id="@+id/book_title"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginRight="20dp"
+
+                                    android:hint="Put Title Here"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/black"
+                                    android:textSize="12sp" />
+
+                                <!--android:textColorHint="@color/abc_primary_text_material_dark" />-->
+                            </android.support.design.widget.TextInputLayout>
+
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:hintTextAppearance="@android:style/TextAppearance.Small">
+
+                                <AutoCompleteTextView
+                                    android:id="@+id/book_detail"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginRight="20dp"
+                                    android:layout_marginTop="10dp"
+                                    android:inputType="textMultiLine"
+                                    android:editable="true"
+                                    android:enabled="true"
+                                    android:isScrollContainer="true"
+                                    android:focusable="true"
+                                    android:gravity="top|left"
+                                    android:hint="Put Stuff Here"
+                                    android:lines="6"
+                                    android:maxLines="8"
+                                    android:minLines="6"
+                                    android:scrollbars="vertical"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/black"
+                                    android:textSize="12sp"  />
+                            </android.support.design.widget.TextInputLayout>
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:hintTextAppearance="@android:style/TextAppearance.Small">
+
+                                <AutoCompleteTextView
+                                    android:layout_marginTop="15dp"
+                                    android:id="@+id/book_moral"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginRight="20dp"
+                                    android:hint="Put Moral of the story"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/black"
+                                    android:textSize="12sp" />
+                            </android.support.design.widget.TextInputLayout>
+
+                        </LinearLayout>
+
+
+
+                        <Button
+                            android:layout_margin="15dp"
+                            android:id="@+id/bt_createbook"
+                            style="?android:textAppearanceSmall"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/grey_0"
+                            android:layout_marginTop="2dp"
+                            android:background="@drawable/login_btn"
+                            android:text="Create Test Book" />
+
+
+                        <View
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/black"></View>
+
+                        <RelativeLayout
+                            android:visibility="gone"
+                            android:layout_marginTop="10dp"
+                            android:id="@+id/next_main_rl"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:id="@+id/next_btn"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="60dp"
+                                    android:src="@drawable/next" />
+
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_marginBottom="10dp"
+
+                                android:textColor="@color/white"
+                                android:textSize="15sp" />
+                        </RelativeLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/more_footer_ll"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="10"
+                >
+
+                <view
+                    android:id="@+id/footerlinearLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="bottom"
+                    class="com.gayatri.testapp.Utils.Footer"
+                    android:gravity="center" />
+                <!--
+                  <include
+                      android:id="@+id/app_footer"
+                      android:layout_width="fill_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_gravity="bottom"
+                      layout="@layout/footer" />
+           -->
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        app:statusBarBackground="@color/sticky_item"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/snackbartextbook">
+    </android.support.design.widget.CoordinatorLayout>
+</RelativeLayout>
